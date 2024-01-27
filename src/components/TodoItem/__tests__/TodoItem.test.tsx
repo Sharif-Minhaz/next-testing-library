@@ -58,7 +58,7 @@ describe("AddTodo", () => {
 			const checkbox = screen.getByRole("checkbox");
 			await userEvent.click(checkbox);
 
-			expect(mockSetTodos).toBeCalled(); // ASSERT
+			expect(mockSetTodos).toHaveBeenCalled(); // ASSERT
 		});
 
 		it("should call setTodos when button clicked", async () => {
@@ -68,7 +68,7 @@ describe("AddTodo", () => {
 			const button = screen.getByRole("button");
 			await userEvent.click(button);
 
-			expect(mockSetTodos).toBeCalled(); // ASSERT
+			expect(mockSetTodos).toHaveBeenCalled(); // ASSERT
 		});
 	});
 });
